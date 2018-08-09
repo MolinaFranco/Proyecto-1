@@ -15,6 +15,8 @@ public class Prueba {
         System.out.println("Memory    (free):  "+ "MB");
         System.out.println("Disk      (total): "+ "MB");
         System.out.println("Disk      (free):  "+ "MB");
+        
+        System.out.println(System.getProperty("java.runtime.version"));
     }
     
 }
