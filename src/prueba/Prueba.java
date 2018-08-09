@@ -1,12 +1,12 @@
 package prueba;
 
-
 public class Prueba {
 
     public static void main(String[] args) {
-        
-        
-        System.out.println(Runtime.getRuntime().freeMemory());
+
+        MainFrame main = new MainFrame();
+        main.setVisible(true);
+        /*System.out.println(Runtime.getRuntime().freeMemory());
 
         System.out.println("-----------------------------------------------------------------");
         
@@ -17,6 +17,8 @@ public class Prueba {
         System.out.println("Disk      (free):  "+ "MB");
         
         System.out.println(System.getProperty("java.runtime.version"));
+         */
+
     }
-    
+
 }

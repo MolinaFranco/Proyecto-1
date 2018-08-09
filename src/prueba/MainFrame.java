@@ -1,9 +1,19 @@
+package prueba;
+
+import Interfaz.InterfazCPU;
+import Interfaz.InterfazGPU;
+import Interfaz.InterfazInfo;
+import Interfaz.InterfazInternet1;
+import Interfaz.InterfazRAM;
+import Interfaz.InterfazStorage;
+import Interfaz.InterfazSystem;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prueba;
+
 
 /**
  *
@@ -27,37 +37,66 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        CPU_btn = new javax.swing.JButton();
+        RAM_btn = new javax.swing.JButton();
+        GPU_btn = new javax.swing.JButton();
+        Storage_btn = new javax.swing.JButton();
+        Internet_btn = new javax.swing.JButton();
+        System_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        EXIT_btn = new javax.swing.JButton();
+        Info_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(550, 350));
 
-        jButton1.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
-        jButton1.setText("CPU");
+        CPU_btn.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        CPU_btn.setText("CPU");
+        CPU_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CPU_btnActionPerformed(evt);
+            }
+        });
 
-        jButton3.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
-        jButton3.setText("RAM");
+        RAM_btn.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        RAM_btn.setText("RAM");
+        RAM_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RAM_btnActionPerformed(evt);
+            }
+        });
 
-        jButton4.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
-        jButton4.setText("GPU");
+        GPU_btn.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        GPU_btn.setText("GPU");
+        GPU_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GPU_btnActionPerformed(evt);
+            }
+        });
 
-        jButton5.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
-        jButton5.setText("Storage");
+        Storage_btn.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        Storage_btn.setText("Storage");
+        Storage_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Storage_btnActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
-        jButton2.setText("Internet");
+        Internet_btn.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        Internet_btn.setText("Internet");
+        Internet_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Internet_btnActionPerformed(evt);
+            }
+        });
 
-        jButton6.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
-        jButton6.setText("System");
+        System_btn.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        System_btn.setText("System");
+        System_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                System_btnActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
         jLabel1.setText("Proyecto Info CPU");
@@ -65,19 +104,19 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         jLabel2.setText("Ebner Lautaro y Molina Franco");
 
-        jButton7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jButton7.setText("Exit");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        EXIT_btn.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        EXIT_btn.setText("Exit");
+        EXIT_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                EXIT_btnActionPerformed(evt);
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
-        jButton8.setText("Info");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        Info_btn.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        Info_btn.setText("Info");
+        Info_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                Info_btnActionPerformed(evt);
             }
         });
 
@@ -90,25 +129,25 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(GPU_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(Internet_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Storage_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(CPU_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(RAM_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(System_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Info_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(26, 26, 26)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(EXIT_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -117,40 +156,90 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1))
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1)
+                    .addComponent(CPU_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Storage_btn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                                .addComponent(System_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RAM_btn, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(GPU_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Internet_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(EXIT_btn)
+                        .addComponent(Info_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void EXIT_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXIT_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_EXIT_btnActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void Info_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Info_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+        InterfazInfo info = new InterfazInfo();
+        this.setVisible(false);
+        info.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Info_btnActionPerformed
+
+    private void Internet_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Internet_btnActionPerformed
+        // TODO add your handling code here:
+        InterfazInternet1 internet = new InterfazInternet1();
+        this.setVisible(false);
+        internet.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Internet_btnActionPerformed
+
+    private void GPU_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GPU_btnActionPerformed
+        // TODO add your handling code here:
+        InterfazGPU gpu = new InterfazGPU();
+        this.setVisible(false);
+        gpu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_GPU_btnActionPerformed
+
+    private void System_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_System_btnActionPerformed
+        // TODO add your handling code here:
+        InterfazSystem system = new InterfazSystem();
+        this.setVisible(false);
+        system.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_System_btnActionPerformed
+
+    private void RAM_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RAM_btnActionPerformed
+        // TODO add your handling code here:
+        InterfazRAM ram = new InterfazRAM();
+        this.setVisible(false);
+        ram.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_RAM_btnActionPerformed
+
+    private void CPU_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPU_btnActionPerformed
+        // TODO add your handling code here:
+        InterfazCPU cpu = new InterfazCPU();
+        this.setVisible(false);
+        cpu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_CPU_btnActionPerformed
+
+    private void Storage_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Storage_btnActionPerformed
+        // TODO add your handling code here:
+        InterfazStorage storage = new InterfazStorage();
+        this.setVisible(false);
+        storage.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Storage_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,14 +277,14 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton CPU_btn;
+    private javax.swing.JButton EXIT_btn;
+    private javax.swing.JButton GPU_btn;
+    private javax.swing.JButton Info_btn;
+    private javax.swing.JButton Internet_btn;
+    private javax.swing.JButton RAM_btn;
+    private javax.swing.JButton Storage_btn;
+    private javax.swing.JButton System_btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
