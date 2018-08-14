@@ -4,10 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/Interfaz/InterfazStorage.java</file>
-            <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/Interfaz/InterfazSystem.java</file>
-            <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/Interfaz/InterfazRAM.java</file>
-            <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/Interfaz/InterfazInternet1.java</file>
-            <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/Interfaz/InterfazCPU.java</file>
+            <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/Interfaz/Ventana.java</file>
+            <file>file:/home/franco/Escritorio/GitHub/Proyecto-1/src/prueba/FuncionesInit.java</file>
         </group>
     </open-files>
 </project-private>
