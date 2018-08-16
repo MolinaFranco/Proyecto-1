@@ -6,6 +6,7 @@
 package Interfaz;
 
 import java.awt.Component;
+import java.io.File;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -24,7 +25,8 @@ public class InterfazStorage extends javax.swing.JFrame {
      */
     public InterfazStorage() {
         initComponents();
-        grafico();   
+        calculo();
+        grafico();
         //setVisible(true);
     }
 
@@ -39,15 +41,17 @@ public class InterfazStorage extends javax.swing.JFrame {
 
         Volver_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        total_lbl = new javax.swing.JLabel();
+        libre_lbl = new javax.swing.JLabel();
+        usado_lbl = new javax.swing.JLabel();
+        porcentaje_lbl = new javax.swing.JLabel();
         PanelG = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        home_txt = new javax.swing.JTextField();
+        Refresh_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,13 +66,13 @@ public class InterfazStorage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel1.setText("Storge Info");
 
-        jLabel2.setText("jLabel2");
+        total_lbl.setText(".........................");
 
-        jLabel3.setText("jLabel3");
+        libre_lbl.setText(".........................");
 
-        jLabel4.setText("jLabel4");
+        usado_lbl.setText(".........................");
 
-        jLabel5.setText("jLabel5");
+        porcentaje_lbl.setText(".........................");
 
         PanelG.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -80,20 +84,29 @@ public class InterfazStorage extends javax.swing.JFrame {
         PanelG.setLayout(PanelGLayout);
         PanelGLayout.setHorizontalGroup(
             PanelGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 716, Short.MAX_VALUE)
+            .addGap(0, 622, Short.MAX_VALUE)
         );
         PanelGLayout.setVerticalGroup(
             PanelGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 479, Short.MAX_VALUE)
+            .addGap(0, 485, Short.MAX_VALUE)
         );
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("Total:");
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setText("Usado");
 
-        jLabel8.setText("jLabel8");
+        jLabel8.setText("Libre:");
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setText("Porcentaje Usado:");
+
+        home_txt.setText("/");
+
+        Refresh_btn.setText("Refresh");
+        Refresh_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Refresh_btnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,23 +122,20 @@ public class InterfazStorage extends javax.swing.JFrame {
                         .addGap(46, 46, 46))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addGap(63, 63, 63)
-                                .addComponent(jLabel4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(63, 63, 63)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(63, 63, 63)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(63, 63, 63)
-                                .addComponent(jLabel5)))
-                        .addGap(54, 54, 54)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel6)
+                            .addComponent(home_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(porcentaje_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(libre_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usado_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Refresh_btn)
+                                .addComponent(total_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(57, 57, 57)
                         .addComponent(PanelG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
@@ -136,29 +146,32 @@ public class InterfazStorage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Volver_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel6))
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel7))
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel8))
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel9))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(PanelG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(home_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Refresh_btn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(total_lbl))
+                        .addGap(79, 79, 79)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(libre_lbl))
+                        .addGap(71, 71, 71)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(usado_lbl))
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(porcentaje_lbl))
+                        .addGap(104, 104, 104))))
         );
 
         pack();
@@ -175,10 +188,39 @@ public class InterfazStorage extends javax.swing.JFrame {
     private void PanelGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelGMouseClicked
      // TODO add your handling code here:
     }//GEN-LAST:event_PanelGMouseClicked
+
+    private void Refresh_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Refresh_btnActionPerformed
+        // TODO add your handling code here:
+        PanelG.removeAll();
+        calculo();
+    }//GEN-LAST:event_Refresh_btnActionPerformed
     
     private void grafico() {
-        PanelG.add(new Ventana());
+        //PanelG.add(new Ventana("hola","holz",22));
     }
+    
+    private void calculo(){
+    File file = null;
+        try {
+            file = new File(home_txt.getText());
+            long totalSpace = file.getTotalSpace();     // Total disk space in bytes.
+            long freeSpace = file.getFreeSpace();       // Free disk space in bytes.
+            long usableSpace = file.getUsableSpace();   // Free disk space in bytes.
+
+            total_lbl.setText(totalSpace / 1024 / 1024 + " MB");
+            libre_lbl.setText(usableSpace / 1024 / 1024 + " MB");
+            usado_lbl.setText((totalSpace - usableSpace) / 1024 / 1024 + " MB");
+            //libre_lbl.setText(freeSpace  / 1024 / 1024 + " MB");
+            float porcentaje = (((totalSpace - usableSpace) * 100) / totalSpace);
+            porcentaje_lbl.setText(porcentaje + " %");
+            PanelG.add(new Ventana("usado","libre",porcentaje));
+
+        } catch (Exception e) {
+
+            System.out.println("Error: directorio no encontrado.");
+        }    
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -219,15 +261,17 @@ public class InterfazStorage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelG;
+    private javax.swing.JButton Refresh_btn;
     private javax.swing.JButton Volver_btn;
+    private javax.swing.JTextField home_txt;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel libre_lbl;
+    private javax.swing.JLabel porcentaje_lbl;
+    private javax.swing.JLabel total_lbl;
+    private javax.swing.JLabel usado_lbl;
     // End of variables declaration//GEN-END:variables
 }

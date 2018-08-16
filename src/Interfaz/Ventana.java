@@ -20,19 +20,26 @@ import org.jfree.data.general.DefaultPieDataset;
  */
 public class Ventana extends JPanel {
 
-    public Ventana() {
+    private final String nombre1;
+    private final String nombre2;
+    private final int porcentaje;
+
+
+
+    public Ventana(String nombre1, String nombre2, float porcentaje ) {
+        this.nombre1 = nombre1;
+        this.nombre2 = nombre2;
+        this.porcentaje = (int) porcentaje;
         setSize(800, 600);
         setVisible(true);
-        init();
+        init(nombre1, nombre2, (int) porcentaje);
     }
 
-    private void init() {
+    private void init(String nombre1, String nombre2, int porcentaje ) {
         // Fuente de Datos
         DefaultPieDataset dataset = new DefaultPieDataset();
-        dataset.setValue("IPhone 5s", new Double(20));
-        dataset.setValue("SamSung Grand", new Double(20));
-        dataset.setValue("MotoG", new Double(40));
-        dataset.setValue("Nokia Lumia", new Double(10));
+        dataset.setValue(nombre1, new Double(porcentaje));
+        dataset.setValue(nombre2, new Double(100-porcentaje));        
 
         JFreeChart chart = ChartFactory.createPieChart3D(
                 "Mobile Sales", // chart title                   
@@ -52,7 +59,6 @@ public class Ventana extends JPanel {
         //ChartUtilities.saveChartAsJPEG( pieChart3D , chart , width , height );
         // Crear el Panel del Grafico con ChartPanel
         ChartPanel chartPanel = new ChartPanel(chart);
-        System.out.println(chartPanel);
         this.add(chartPanel);
     }
 
