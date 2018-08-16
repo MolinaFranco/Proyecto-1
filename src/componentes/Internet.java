@@ -20,35 +20,12 @@ public class Internet {
         }
 
         System.out.println("\tIP....................: " + getIP());
-        System.out.println("\tMascara de subred.....: " + getMascaraSubred());
-        System.out.println("\tDireccion de difucion.: ");
+        System.out.println("\tMascara de subred.....: " + getMasc());
+        System.out.println("\tDireccion de difucion.: " + getDifus());
         System.out.println("\tDNS primario..........: ");
         System.out.println("\tDNS sxecundario.......: ");
     }
     
-//    ifconfig $(ifconfig|grep -Eo '^e[^ ]+')|grep -Eo 'Másc[^ ]+'|cut -d: -f2
-//    ifconfig $(ifconfig|grep -Eo '^w[^ ]+')|grep -Eo 'Másc[^ ]+'|cut -d: -f2
-//    
-    
-    
-    private static String getMascaraSubred(){
-        String output = null;
-        if(isWireless()){
-            
-            try {
-            Process exec = Runtime.getRuntime().exec("ifconfig $(ifconfig|grep -Eo '^w[^ ]+')|grep -Eo 'Másc[^ ]+'|cut -d: -f2");
-            BufferedReader r = new BufferedReader(new InputStreamReader(exec.getInputStream()));
-
-            output = r.readLine();       
-            return output;
-            } catch (Exception e) {
-        }
-        }else{
-            
-        }
-        
-        return output;
-    }
     public static String getIP() throws SocketException{
         Enumeration e = NetworkInterface.getNetworkInterfaces();
         NetworkInterface n = (NetworkInterface) e.nextElement();
@@ -58,13 +35,29 @@ public class Internet {
         return i.getHostAddress();
     }
     
+    private static String execute(String input) {
+        String[] cmd = {"/bin/bash", "-c", input};
+        String output = null;
+        
+        try {
+            Process exec = Runtime.getRuntime().exec(cmd);
+            BufferedReader r = new BufferedReader(new InputStreamReader(exec.getInputStream()));
+            output = r.readLine();
+
+        } catch (Exception e) {
+        }
+        return output;
+    }
+    
+    private static String getSSID() {
+        String output = execute("iwgetid -r");
+        return output;
+    }
+    
     public static boolean isWireless() {
 
         try {
-            Process exec = Runtime.getRuntime().exec("iwgetid");
-            BufferedReader r = new BufferedReader(new InputStreamReader(exec.getInputStream()));
-            String output;
-            output = r.readLine();
+            String output = execute("iwgetid");
             if (output.contains("ESSID:")) {
                 return true;
             } else {
@@ -75,18 +68,26 @@ public class Internet {
             return false;
         }
     }
-
-    private static String getSSID() {
-        ////wlp18s0   ESSID:"Colgate De Esta"
+    
+    private static String getMasc() {
         String output = null;
-        try {
-            Process exec = Runtime.getRuntime().exec("iwgetid -r");
-            BufferedReader r = new BufferedReader(new InputStreamReader(exec.getInputStream()));
-            output = r.readLine();
-
-        } catch (Exception e) {
+        if (isWireless()) {
+            output = execute("ifconfig $(ifconfig|grep -Eo '^w[^ ]+')|grep -Eo 'Másc[^ ]+'|cut -d: -f2");
+        }else{
+            output = execute("ifconfig $(ifconfig|grep -Eo '^e[^ ]+')|grep -Eo 'Másc[^ ]+'|cut -d: -f2");
         }
 
         return output;
-    }
+    }    
+    
+    private static String getDifus() {
+        String output = null;
+        if (isWireless()) {
+            output = execute("ifconfig $(ifconfig|grep -Eo '^w[^ ]+')|grep -Eo 'Difus[^ ]+'|cut -d: -f2");
+        }else{
+            output = execute("ifconfig $(ifconfig|grep -Eo '^e[^ ]+')|grep -Eo 'Difus[^ ]+'|cut -d: -f2");
+        }
+        return output;
+    } 
+    
 }
