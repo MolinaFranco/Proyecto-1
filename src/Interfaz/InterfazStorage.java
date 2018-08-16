@@ -5,10 +5,11 @@
  */
 package Interfaz;
 
-import javax.swing.JPanel;
+import java.awt.Component;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.data.general.DefaultPieDataset;
 import prueba.MainFrame;
 
@@ -17,14 +18,14 @@ import prueba.MainFrame;
  * @author franco
  */
 public class InterfazStorage extends javax.swing.JFrame {
-JPanel panel;
+
     /**
      * Creates new form InterfazCpu
      */
     public InterfazStorage() {
         initComponents();
-        setVisible(true);
-        init();
+        grafico();   
+        //setVisible(true);
     }
 
     /**
@@ -36,29 +37,17 @@ JPanel panel;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         Volver_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
         PanelG = new javax.swing.JPanel();
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 276, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,13 +70,11 @@ JPanel panel;
 
         jLabel5.setText("jLabel5");
 
-        jCheckBox1.setText("jCheckBox1");
-
-        jCheckBox2.setText("jCheckBox2");
-
-        jCheckBox3.setText("jCheckBox3");
-
-        jCheckBox4.setText("jCheckBox4");
+        PanelG.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PanelGMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelGLayout = new javax.swing.GroupLayout(PanelG);
         PanelG.setLayout(PanelGLayout);
@@ -97,8 +84,16 @@ JPanel panel;
         );
         PanelGLayout.setVerticalGroup(
             PanelGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 479, Short.MAX_VALUE)
         );
+
+        jLabel6.setText("jLabel6");
+
+        jLabel7.setText("jLabel7");
+
+        jLabel8.setText("jLabel8");
+
+        jLabel9.setText("jLabel9");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -115,21 +110,21 @@ JPanel panel;
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel8)
+                                .addGap(63, 63, 63)
                                 .addComponent(jLabel4))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel7)
+                                .addGap(63, 63, 63)
                                 .addComponent(jLabel3))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)))
+                                .addComponent(jLabel6)
+                                .addGap(63, 63, 63)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(63, 63, 63)
+                                .addComponent(jLabel5)))
                         .addGap(54, 54, 54)
                         .addComponent(PanelG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
@@ -143,23 +138,23 @@ JPanel panel;
                     .addComponent(Volver_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
+                        .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jCheckBox1))
-                        .addGap(49, 49, 49)
+                            .addComponent(jLabel6))
+                        .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jLabel3))
-                        .addGap(52, 52, 52)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel7))
+                        .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jCheckBox3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
+                            .addComponent(jLabel8))
+                        .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jCheckBox4))
-                        .addGap(55, 55, 55))
+                            .addComponent(jLabel9))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(PanelG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -177,29 +172,12 @@ JPanel panel;
         this.dispose();
     }//GEN-LAST:event_Volver_btnActionPerformed
 
-    private void init() {
-        panel = new JPanel();
-        getContentPane().add(panel);
-        // Fuente de Datos
-        DefaultPieDataset data = new DefaultPieDataset();
-        data.setValue("C", 0);
-        data.setValue("Java", 85);
-        data.setValue("Python", 15);
-        
-        System.out.println("hola mundo");
- 
-        // Creando el Grafico
-        JFreeChart chart = ChartFactory.createPieChart(
-         "Ejemplo Rapido de Grafico en un ChartFrame", 
-         data, 
-         true, 
-         true, 
-         false);
- 
-        // Crear el Panel del Grafico con ChartPanel
-        ChartPanel chartPanel = new ChartPanel(chart);
-        panel.add(chartPanel);
-        
+    private void PanelGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelGMouseClicked
+     // TODO add your handling code here:
+    }//GEN-LAST:event_PanelGMouseClicked
+    
+    private void grafico() {
+        PanelG.add(new Ventana());
     }
     /**
      * @param args the command line arguments
@@ -230,7 +208,7 @@ JPanel panel;
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -242,15 +220,14 @@ JPanel panel;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelG;
     private javax.swing.JButton Volver_btn;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
