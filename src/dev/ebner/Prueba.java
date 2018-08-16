@@ -37,13 +37,9 @@ public class Prueba {
 
 
 
-        System.out.println("\n\n\n");
+
     // Internet:
-        System.out.println("\nInternet:");
-        System.out.println("\tSSID...............: " + "");
-        System.out.println("\tIP.................: " + "");
-        System.out.println("\tDNS primario.......: " + "");
-        System.out.println("\tDNS secundario.....: " + ""); 
+
 
     
     // Sistema Operativo:
@@ -73,7 +69,8 @@ public class Prueba {
         System.out.println("\nDisco:");
         System.out.println("\tTotal..............: " + totalSpace / 1024 / 1024 / 1024 + " GB");
         System.out.println("\tLibre..............: " + freeSpace / 1024 / 1024 / 1024 + " GB");
-        System.out.println("\tUsado (%)..........: " +  " MB");
+        float porcentaje = 100-((freeSpace*100) / totalSpace);
+        System.out.println("\tUsado .............: " +  porcentaje + " %");
         
         System.out.println("\n\n\n");
     
