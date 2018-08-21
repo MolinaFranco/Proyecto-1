@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import clases.Ventana;
 import java.awt.Component;
 import java.io.File;
 import org.jfree.chart.ChartFactory;
@@ -26,7 +27,7 @@ public class InterfazStorage extends javax.swing.JFrame {
     public InterfazStorage() {
         initComponents();
         calculo();
-        grafico();
+        //grafico();
         //setVisible(true);
     }
 
@@ -84,23 +85,28 @@ public class InterfazStorage extends javax.swing.JFrame {
         PanelG.setLayout(PanelGLayout);
         PanelGLayout.setHorizontalGroup(
             PanelGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 622, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
         );
         PanelGLayout.setVerticalGroup(
             PanelGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 485, Short.MAX_VALUE)
         );
 
+        jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         jLabel6.setText("Total:");
 
+        jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         jLabel7.setText("Usado");
 
+        jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         jLabel8.setText("Libre:");
 
+        jLabel9.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         jLabel9.setText("Porcentaje Usado:");
 
         home_txt.setText("/");
 
+        Refresh_btn.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         Refresh_btn.setText("Refresh");
         Refresh_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +123,7 @@ public class InterfazStorage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 738, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 839, Short.MAX_VALUE)
                         .addComponent(Volver_btn)
                         .addGap(46, 46, 46))
                     .addGroup(layout.createSequentialGroup()
@@ -135,9 +141,9 @@ public class InterfazStorage extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(Refresh_btn)
                                 .addComponent(total_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(57, 57, 57)
-                        .addComponent(PanelG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(PanelG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

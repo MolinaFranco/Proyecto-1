@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaz;
+package clases;
 
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
 import javax.swing.JFrame;
@@ -25,8 +25,6 @@ public class Ventana extends JPanel {
     private final String nombre2;
     private final int porcentaje;
 
-
-
     public Ventana(String nombre1, String nombre2, float porcentaje) {
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
@@ -36,14 +34,14 @@ public class Ventana extends JPanel {
         init(nombre1, nombre2, (int) porcentaje);
     }
 
-    private void init(String nombre1, String nombre2, int porcentaje ) {
+    private void init(String nombre1, String nombre2, int porcentaje) {
         // Fuente de Datos
         DefaultPieDataset dataset = new DefaultPieDataset();
         dataset.setValue(nombre1, new Double(porcentaje));
-        dataset.setValue(nombre2, new Double(100-porcentaje));        
+        dataset.setValue(nombre2, new Double(100 - porcentaje));
 
         JFreeChart chart = ChartFactory.createPieChart3D(
-                "Mobile Sales", // chart title                   
+                "Storage", // chart title                   
                 dataset, // data 
                 true, // include legend                   
                 true,
