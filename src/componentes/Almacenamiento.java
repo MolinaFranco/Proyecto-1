@@ -22,7 +22,6 @@ public class Almacenamiento {
             System.out.println("\tUsado .............: " + porcentaje + " %");
 
         } catch (Exception e) {
-
             System.out.println("Error: directorio no encontrado.");
         }
 

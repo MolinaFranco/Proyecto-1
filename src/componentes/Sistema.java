@@ -50,7 +50,6 @@ public class Sistema {
                     indicePermitido = letra;
                 }
             }
-
         }
         salida_int = Integer.parseInt(salida);
         return salida_int;
