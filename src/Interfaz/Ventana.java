@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
@@ -26,7 +27,7 @@ public class Ventana extends JPanel {
 
 
 
-    public Ventana(String nombre1, String nombre2, float porcentaje ) {
+    public Ventana(String nombre1, String nombre2, float porcentaje) {
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
         this.porcentaje = (int) porcentaje;
@@ -62,7 +63,7 @@ public class Ventana extends JPanel {
         this.add(chartPanel);
     }
 
-    public static void main(String args[]) {
-        new Ventana().setVisible(true);
+    public static void main(String nombre1, String nombre2, int porcentaje) {
+        new Ventana(nombre1, nombre2, porcentaje).setVisible(true);
     }
 }
