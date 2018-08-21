@@ -28,7 +28,7 @@ public class Sistema {
         System.out.println("\tNombre del usuario...: " + System.getProperty("user.name"));
         System.out.println("\tUptime...............: " + (formatoUptime(strUptime) / 60) 
                 + " minutos");
-
+        
     }
 
     public static int formatoUptime(String uptime) {

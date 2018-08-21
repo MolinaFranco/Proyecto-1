@@ -8,6 +8,8 @@ public class GPU {
 
     public static void main(String[] args) {
         /* Se necesita instalar glxinfo, sudo apt install mesa-utils */
+        System.out.println("Resolucion..........: " + execute("echo "
+                + "$(xdpyinfo | grep dimensions) | cut -d \":\" -f2"));
         
         System.out.println("Modelo..............: " + execute("echo "
                 + "$(glxinfo |grep \"Device:\" | cut -d \":\" -f2) | cut -d \"(\" -f 1,2"));
