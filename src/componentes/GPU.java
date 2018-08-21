@@ -3,6 +3,7 @@ package componentes;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+
 public class GPU {
 
     public static void main(String[] args) {
@@ -35,5 +36,7 @@ public class GPU {
         return output;
 
     } 
-
 }
+    
+
+
