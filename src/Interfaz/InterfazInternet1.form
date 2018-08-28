@@ -72,9 +72,9 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                      <Component id="info_lbl" min="-2" pref="283" max="-2" attributes="0"/>
-                      <EmptySpace pref="60" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="info_lbl" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="Volver_btn" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -88,12 +88,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel1" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="info_lbl" max="32767" attributes="0"/>
-                              <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="info_lbl" alignment="3" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -131,23 +128,32 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="18" style="2"/>
+          <Font name="Noto Sans" size="24" style="2"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Internet Info"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="DNS_1:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="DNS_2:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="18" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="DNS_3:"/>
       </Properties>
     </Component>
@@ -165,7 +171,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="14" style="2"/>
+          <Font name="Noto Sans" size="18" style="2"/>
         </Property>
         <Property name="text" type="java.lang.String" value="IP:"/>
       </Properties>
@@ -173,7 +179,7 @@
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="14" style="2"/>
+          <Font name="Noto Sans" size="18" style="2"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Mascara de subred:"/>
       </Properties>
@@ -181,45 +187,63 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="14" style="2"/>
+          <Font name="Noto Sans" size="18" style="2"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Direccion de difucion:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="ip_lbl">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="14" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="........................"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="masc_lbl">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="14" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="........................"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="direc_lbl">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="14" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="........................"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dns_lbl1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="14" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="........................"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dns_lbl2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="14" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="........................"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dns_lbl3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Noto Sans" size="14" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="........................"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="info_lbl">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="14" style="2"/>
+          <Font name="Noto Sans" size="18" style="2"/>
         </Property>
         <Property name="text" type="java.lang.String" value="................................................................................................"/>
       </Properties>

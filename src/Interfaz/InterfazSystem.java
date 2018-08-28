@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import clases.Sistema_clase;
 import prueba.MainFrame;
 
 /**
@@ -18,6 +19,8 @@ public class InterfazSystem extends javax.swing.JFrame {
      */
     public InterfazSystem() {
         initComponents();
+        new Sistema_clase();
+        refresh();
     }
 
     /**
@@ -31,17 +34,19 @@ public class InterfazSystem extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
+        so_lbl = new javax.swing.JLabel();
+        aso_lbl = new javax.swing.JLabel();
+        vso_lbl = new javax.swing.JLabel();
+        home_lbl = new javax.swing.JLabel();
         Volver_btn = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        uptime_lbl = new javax.swing.JLabel();
+        usu_lbl = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,26 +61,20 @@ public class InterfazSystem extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
         jLabel1.setText("System Info");
 
-        jLabel2.setText("jLabel2");
+        so_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        so_lbl.setText("............................");
 
-        jLabel3.setText("jLabel3");
+        aso_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        aso_lbl.setText("............................");
 
-        jLabel4.setText("jLabel4");
+        vso_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        vso_lbl.setText("............................");
 
-        jLabel5.setText("jLabel5");
-
-        jCheckBox1.setText("jCheckBox1");
-
-        jCheckBox2.setText("jCheckBox2");
-
-        jCheckBox3.setText("jCheckBox3");
-
-        jCheckBox4.setText("jCheckBox4");
-
-        jScrollPane1.setViewportView(jEditorPane1);
+        home_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        home_lbl.setText("............................");
 
         Volver_btn.setFont(new java.awt.Font("Noto Sans", 3, 36)); // NOI18N
         Volver_btn.setText("←");
@@ -85,6 +84,30 @@ public class InterfazSystem extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel6.setText("Sistema Operativo:");
+
+        jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel7.setText("Arquitectura del SO:");
+
+        jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel8.setText("Version del SO:");
+
+        jLabel9.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel9.setText("Ruta del Home:");
+
+        jLabel10.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel10.setText("Nombre del usuario:");
+
+        jLabel11.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel11.setText("Uptime:");
+
+        uptime_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        uptime_lbl.setText("............................");
+
+        usu_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        usu_lbl.setText("............................");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,59 +116,65 @@ public class InterfazSystem extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox2)
-                                .addGap(245, 245, 245))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jCheckBox3)
-                                    .addComponent(jCheckBox1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(117, 117, 117)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Volver_btn)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                        .addComponent(Volver_btn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel6))
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(aso_lbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel11))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(vso_lbl)
+                                    .addComponent(so_lbl))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(home_lbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(uptime_lbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(usu_lbl, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jCheckBox1))
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jLabel3))
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jCheckBox3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jCheckBox4)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(Volver_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(55, 55, 55))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Volver_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(so_lbl)
+                            .addComponent(jLabel10)
+                            .addComponent(usu_lbl)
+                            .addComponent(jLabel6))
+                        .addGap(78, 78, 78)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(uptime_lbl)
+                            .addComponent(aso_lbl)
+                            .addComponent(jLabel7))))
+                .addGap(75, 75, 75)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(vso_lbl)
+                    .addComponent(jLabel9)
+                    .addComponent(home_lbl))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -159,6 +188,15 @@ public class InterfazSystem extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_Volver_btnActionPerformed
 
+    private void refresh(){
+        so_lbl.setText(Sistema_clase.getSist_op());
+        aso_lbl.setText(Sistema_clase.getArqui_so());
+        vso_lbl.setText(Sistema_clase.getVersio_os());
+        uptime_lbl.setText(Sistema_clase.getUptime_1());
+        home_lbl.setText(Sistema_clase.getRuta_home());
+        usu_lbl.setText(Sistema_clase.getNombre_usu());
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -199,17 +237,19 @@ public class InterfazSystem extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Volver_btn;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JLabel aso_lbl;
+    private javax.swing.JLabel home_lbl;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel so_lbl;
+    private javax.swing.JLabel uptime_lbl;
+    private javax.swing.JLabel usu_lbl;
+    private javax.swing.JLabel vso_lbl;
     // End of variables declaration//GEN-END:variables
 }

@@ -69,13 +69,16 @@ public class InterfazInternet1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
         jLabel1.setText("Internet Info");
 
+        jLabel2.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
         jLabel2.setText("DNS_1:");
 
+        jLabel3.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
         jLabel3.setText("DNS_2:");
 
+        jLabel4.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
         jLabel4.setText("DNS_3:");
 
         Volver_btn.setFont(new java.awt.Font("Noto Sans", 3, 36)); // NOI18N
@@ -86,28 +89,34 @@ public class InterfazInternet1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel6.setText("IP:");
 
-        jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel7.setText("Mascara de subred:");
 
-        jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel8.setText("Direccion de difucion:");
 
+        ip_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         ip_lbl.setText("........................");
 
+        masc_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         masc_lbl.setText("........................");
 
+        direc_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         direc_lbl.setText("........................");
 
+        dns_lbl1.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         dns_lbl1.setText("........................");
 
+        dns_lbl2.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         dns_lbl2.setText("........................");
 
+        dns_lbl3.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         dns_lbl3.setText("........................");
 
-        info_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        info_lbl.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         info_lbl.setText("................................................................................................");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -140,9 +149,9 @@ public class InterfazInternet1 extends javax.swing.JFrame {
                             .addComponent(dns_lbl3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(121, 121, 121)
-                        .addComponent(info_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addGap(45, 45, 45)
+                        .addComponent(info_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addGap(39, 39, 39)
                         .addComponent(Volver_btn)))
                 .addGap(46, 46, 46))
         );
@@ -152,11 +161,9 @@ public class InterfazInternet1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(info_lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(8, 8, 8))))
+                            .addComponent(info_lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(Volver_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -195,7 +202,7 @@ public class InterfazInternet1 extends javax.swing.JFrame {
     private void refresh() throws SocketException {
         if (isWireless()) {
             info_lbl.setText("(Estas conectado a una red WiFi)");
-            System.out.println("\tSSID..................: " + getSSID());
+       
         } else {
             info_lbl.setText("(Estas conectado a una red cableada)");
         }
@@ -215,8 +222,7 @@ public class InterfazInternet1 extends javax.swing.JFrame {
         }
         if (a == 2) {
             dns_lbl2.setText(i);
-        }
-        if (a == 3) {
+        } else {
             dns_lbl3.setText(i);
         }
     }

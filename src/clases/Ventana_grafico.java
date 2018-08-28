@@ -19,29 +19,31 @@ import org.jfree.data.general.DefaultPieDataset;
  *
  * @author franco
  */
-public class Ventana extends JPanel {
+public class Ventana_grafico extends JPanel {
 
     private final String nombre1;
     private final String nombre2;
-    private final int porcentaje;
+    private final String titulo;
+    private final float porcentaje;
 
-    public Ventana(String nombre1, String nombre2, float porcentaje) {
+    public Ventana_grafico(String nombre1, String nombre2, float porcentaje, String titulo) {
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
+        this.titulo = titulo;
         this.porcentaje = (int) porcentaje;
         setSize(800, 600);
         setVisible(true);
-        init(nombre1, nombre2, (int) porcentaje);
+        init(nombre1, nombre2, (int) porcentaje, titulo);
     }
 
-    private void init(String nombre1, String nombre2, int porcentaje) {
+    private void init(String nombre1, String nombre2, int porcentaje, String titulo) {
         // Fuente de Datos
         DefaultPieDataset dataset = new DefaultPieDataset();
         dataset.setValue(nombre1, new Double(porcentaje));
         dataset.setValue(nombre2, new Double(100 - porcentaje));
 
         JFreeChart chart = ChartFactory.createPieChart3D(
-                "Storage", // chart title                   
+                titulo, // chart title                   
                 dataset, // data 
                 true, // include legend                   
                 true,
@@ -61,7 +63,7 @@ public class Ventana extends JPanel {
         this.add(chartPanel);
     }
 
-    public static void main(String nombre1, String nombre2, int porcentaje) {
-        new Ventana(nombre1, nombre2, porcentaje).setVisible(true);
+    public static void main(String nombre1, String nombre2, int porcentaje, String titulo) {
+        new Ventana_grafico(nombre1, nombre2, porcentaje, titulo).setVisible(true);
     }
 }

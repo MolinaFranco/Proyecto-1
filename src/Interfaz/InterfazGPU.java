@@ -5,6 +5,9 @@
  */
 package Interfaz;
 
+import clases.Gpu_clase;
+import prueba.MainFrame;
+
 /**
  *
  * @author franco
@@ -16,6 +19,8 @@ public class InterfazGPU extends javax.swing.JFrame {
      */
     public InterfazGPU() {
         initComponents();
+        Gpu_clase gpu = new Gpu_clase();
+        refresh(gpu);
     }
 
     /**
@@ -29,16 +34,15 @@ public class InterfazGPU extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
+        modelo_lbl = new javax.swing.JLabel();
+        fabricante_lbl = new javax.swing.JLabel();
+        Volver_btn = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        vercion_lbl = new javax.swing.JLabel();
+        memoria_lbl = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,88 +57,115 @@ public class InterfazGPU extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("CPU ");
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 24)); // NOI18N
+        jLabel1.setText("GPU Info");
 
-        jLabel2.setText("jLabel2");
+        modelo_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        modelo_lbl.setText("............................");
 
-        jLabel3.setText("jLabel3");
+        fabricante_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        fabricante_lbl.setText("............................");
 
-        jLabel4.setText("jLabel4");
+        Volver_btn.setFont(new java.awt.Font("Noto Sans", 3, 36)); // NOI18N
+        Volver_btn.setText("←");
+        Volver_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Volver_btnActionPerformed(evt);
+            }
+        });
 
-        jLabel5.setText("jLabel5");
+        jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel6.setText("Modelo:");
 
-        jCheckBox1.setText("jCheckBox1");
+        jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel7.setText("Fabricante:");
 
-        jCheckBox2.setText("jCheckBox2");
+        jLabel10.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel10.setText("Memoria de video:");
 
-        jCheckBox3.setText("jCheckBox3");
+        jLabel11.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
+        jLabel11.setText("Vercion:");
 
-        jCheckBox4.setText("jCheckBox4");
+        vercion_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        vercion_lbl.setText("............................");
 
-        jScrollPane1.setViewportView(jEditorPane1);
+        memoria_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        memoria_lbl.setText("............................");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Volver_btn))
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox2)
-                                .addGap(245, 245, 245))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jCheckBox3)
-                                    .addComponent(jCheckBox1))
+                                .addComponent(fabricante_lbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(117, 117, 117)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(46, Short.MAX_VALUE))))
+                                .addComponent(jLabel11))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(modelo_lbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                                .addComponent(jLabel10)))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(vercion_lbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(memoria_lbl, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jCheckBox1))
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jLabel3))
-                        .addGap(52, 52, 52)
+                            .addComponent(Volver_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jCheckBox3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                            .addComponent(modelo_lbl)
+                            .addComponent(jLabel10)
+                            .addComponent(memoria_lbl)
+                            .addComponent(jLabel6))
+                        .addGap(78, 78, 78)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jCheckBox4)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(55, 55, 55))
+                            .addComponent(jLabel11)
+                            .addComponent(vercion_lbl)
+                            .addComponent(fabricante_lbl)
+                            .addComponent(jLabel7))))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Volver_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volver_btnActionPerformed
+        // TODO add your handling code here:
+        MainFrame main = new MainFrame();
+        this.setVisible(false);
+        main.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Volver_btnActionPerformed
+
+    private void refresh(Gpu_clase gpu){
+        modelo_lbl.setText(gpu.getModelo());
+        fabricante_lbl.setText(gpu.getFabricante());
+        vercion_lbl.setText(gpu.getVercion());
+        memoria_lbl.setText(gpu.getMemoria());
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -164,6 +195,10 @@ public class InterfazGPU extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -174,17 +209,16 @@ public class InterfazGPU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JButton Volver_btn;
+    private javax.swing.JLabel fabricante_lbl;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel memoria_lbl;
+    private javax.swing.JLabel modelo_lbl;
+    private javax.swing.JLabel vercion_lbl;
     // End of variables declaration//GEN-END:variables
 }

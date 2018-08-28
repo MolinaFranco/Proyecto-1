@@ -18,25 +18,15 @@ import java.util.Enumeration;
 
 public class Internet_clase {
 
-    String ip;
-    String execute;
-    String SSID;
-    boolean isWireless;
-    String Masc;
-    String Difus;
-    String getDNS;
-
-    public static void main(String[] args) throws Exception {
-
-    }
-
     public static String getIP() throws SocketException {
-        Enumeration e = NetworkInterface.getNetworkInterfaces();
-        NetworkInterface n = (NetworkInterface) e.nextElement();
-        Enumeration ee = n.getInetAddresses();
-        ee.nextElement();
-        InetAddress i = (InetAddress) ee.nextElement();
-        return i.getHostAddress();
+        String output = null;
+        if (isWireless()) {
+            output = execute("ifconfig $(ifconfig|grep -Eo '^w[^ ]+')|grep -Eo 'Direc. inet[^ ]+'|cut -d: -f2");
+        } else {
+            output = execute("ifconfig $(ifconfig|grep -Eo '^e[^ ]+')|grep -Eo 'Direc. inet[^ ]+'|cut -d: -f2");
+        }
+
+        return output;
     }
 
     private static String execute(String input) {
