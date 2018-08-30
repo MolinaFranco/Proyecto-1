@@ -1,5 +1,4 @@
 # Proyecto-1
 1 Proyecto CPU
-molina
-ebner
-
+Vercion 1.2
+Molina Franco y Lautaro ebner
