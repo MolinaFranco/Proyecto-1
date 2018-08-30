@@ -1,3 +1,4 @@
 # Proyecto-1
 1 Proyecto CPU
-Ejecutar la rama: develop-molina
+Vercion 1.2
+Molina Franco y Lautaro ebner
