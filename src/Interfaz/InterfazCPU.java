@@ -10,7 +10,6 @@ import clases.Ventana_grafico;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.jmx.CpuTimerMBean;
 import prueba.MainFrame;
 
 /**

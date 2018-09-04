@@ -98,7 +98,7 @@
                           <Component id="GPU_btn" min="-2" pref="93" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="Internet_btn" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="Info_btn" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="Info_btn" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="EXIT_btn" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -214,7 +214,7 @@
     <Component class="javax.swing.JButton" name="Info_btn">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="14" style="2"/>
+          <Font name="Noto Sans" size="18" style="2"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Info"/>
       </Properties>

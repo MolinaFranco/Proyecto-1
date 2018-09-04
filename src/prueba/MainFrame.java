@@ -118,7 +118,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        Info_btn.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
+        Info_btn.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         Info_btn.setText("Info");
         Info_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +194,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(GPU_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(Internet_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Info_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Info_btn)
                                 .addComponent(EXIT_btn))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)

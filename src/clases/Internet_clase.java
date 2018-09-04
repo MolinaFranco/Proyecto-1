@@ -86,7 +86,6 @@ public class Internet_clase {
 
     public static String[] getDNS() {
         String output = execute("echo $(nmcli dev show | grep DNS | tr -s ' ' |cut -d\" \" -f2)");
-        //  192.168.60.1 192.168.0.1 192.168.0.6
         String[] array = output.split(" ");
         return array;
     }
