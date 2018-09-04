@@ -91,7 +91,7 @@ public class InterfazInfo extends javax.swing.JFrame {
         jLabel6.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
-        jLabel1.setText("Proyecto del ITS Villada");
+        jLabel1.setText("Proyect  ITS Villada");
 
         jLabel2.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         jLabel2.setText("Programacion 5 C");

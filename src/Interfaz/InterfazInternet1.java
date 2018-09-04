@@ -93,10 +93,10 @@ public class InterfazInternet1 extends javax.swing.JFrame {
         jLabel6.setText("IP:");
 
         jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel7.setText("Mascara de subred:");
+        jLabel7.setText("Subnet mask: ");
 
         jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel8.setText("Direccion de difucion:");
+        jLabel8.setText("Address of diffusion: ");
 
         ip_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         ip_lbl.setText("........................");
@@ -129,9 +129,8 @@ public class InterfazInternet1 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7)))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(ip_lbl, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
@@ -144,7 +143,7 @@ public class InterfazInternet1 extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dns_lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dns_lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                             .addComponent(dns_lbl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dns_lbl3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()

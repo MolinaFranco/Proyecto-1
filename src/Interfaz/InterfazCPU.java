@@ -67,16 +67,16 @@ public class InterfazCPU extends javax.swing.JFrame {
         jLabel1.setText("CPU Info ");
 
         jLabel2.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel2.setText("Marca:");
+        jLabel2.setText("Brand:");
 
         jLabel3.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel3.setText("Modelo:");
+        jLabel3.setText("Model:");
 
         jLabel4.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel4.setText("Cores:");
 
         jLabel5.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel5.setText("Usada:");
+        jLabel5.setText("Used:");
 
         marca_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         marca_lbl.setText("...........................");
@@ -137,7 +137,7 @@ public class InterfazCPU extends javax.swing.JFrame {
                             .addComponent(cores_lbl)
                             .addComponent(modelo_lbl)
                             .addComponent(marca_lbl))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                         .addComponent(PanelG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45))
                     .addGroup(layout.createSequentialGroup()

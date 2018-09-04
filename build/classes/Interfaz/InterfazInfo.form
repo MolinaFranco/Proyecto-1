@@ -212,7 +212,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="14" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Proyecto del ITS Villada"/>
+        <Property name="text" type="java.lang.String" value="Proyect  ITS Villada"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

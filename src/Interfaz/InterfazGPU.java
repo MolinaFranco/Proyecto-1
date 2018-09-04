@@ -75,16 +75,16 @@ public class InterfazGPU extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel6.setText("Modelo:");
+        jLabel6.setText("Model:");
 
         jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel7.setText("Fabricante:");
+        jLabel7.setText("Maker:");
 
         jLabel10.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel10.setText("Memoria de video:");
+        jLabel10.setText("Video memory:");
 
         jLabel11.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel11.setText("Vercion:");
+        jLabel11.setText("Version:");
 
         vercion_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         vercion_lbl.setText("............................");
@@ -115,13 +115,13 @@ public class InterfazGPU extends javax.swing.JFrame {
                                 .addComponent(jLabel11))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(modelo_lbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
                                 .addComponent(jLabel10)))
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(vercion_lbl, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(memoria_lbl, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

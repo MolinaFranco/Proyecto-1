@@ -79,13 +79,13 @@ public class InterfazRAM extends javax.swing.JFrame {
         jLabel2.setText("Total:");
 
         jLabel3.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel3.setText("Libre:");
+        jLabel3.setText("Free:");
 
         jLabel4.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel4.setText("Usada:");
+        jLabel4.setText("Used: ");
 
         jLabel5.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel5.setText("Porcentaje usado:");
+        jLabel5.setText("Percentage used: ");
 
         total_lbl.setFont(new java.awt.Font("Noto Sans", 2, 14)); // NOI18N
         total_lbl.setText("...........................");
@@ -127,12 +127,10 @@ public class InterfazRAM extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4)))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
                         .addGap(68, 68, 68)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -143,7 +141,7 @@ public class InterfazRAM extends javax.swing.JFrame {
                                     .addComponent(total_lbl)
                                     .addComponent(usada_lbl)
                                     .addComponent(libre_lbl))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                                 .addComponent(PanelG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26))))
                     .addGroup(layout.createSequentialGroup()

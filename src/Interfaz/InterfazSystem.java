@@ -85,19 +85,19 @@ public class InterfazSystem extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel6.setText("Sistema Operativo:");
+        jLabel6.setText("Operating system: ");
 
         jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel7.setText("Arquitectura del SO:");
+        jLabel7.setText("SO architecture: ");
 
         jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel8.setText("Version del SO:");
+        jLabel8.setText("SO version:");
 
         jLabel9.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel9.setText("Ruta del Home:");
+        jLabel9.setText("Route of the Home: ");
 
         jLabel10.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel10.setText("Nombre del usuario:");
+        jLabel10.setText("User name: ");
 
         jLabel11.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel11.setText("Uptime:");
@@ -135,7 +135,7 @@ public class InterfazSystem extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(vso_lbl)
                                     .addComponent(so_lbl))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))))

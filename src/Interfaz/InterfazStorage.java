@@ -96,13 +96,13 @@ public class InterfazStorage extends javax.swing.JFrame {
         jLabel6.setText("Total:");
 
         jLabel7.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel7.setText("Usado");
+        jLabel7.setText("Used:");
 
         jLabel8.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
         jLabel8.setText("Libre:");
 
         jLabel9.setFont(new java.awt.Font("Noto Sans", 2, 18)); // NOI18N
-        jLabel9.setText("Porcentaje Usado:");
+        jLabel9.setText("Percentage used: ");
 
         home_txt.setText("/");
 
@@ -137,7 +137,7 @@ public class InterfazStorage extends javax.swing.JFrame {
                                 .addComponent(Refresh_btn)
                                 .addComponent(total_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(porcentaje_lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                         .addComponent(PanelG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()

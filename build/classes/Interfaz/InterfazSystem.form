@@ -67,7 +67,7 @@
                                   <Component id="vso_lbl" min="-2" max="-2" attributes="0"/>
                                   <Component id="so_lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="16" max="32767" attributes="0"/>
+                              <EmptySpace pref="31" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -183,7 +183,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Sistema Operativo:"/>
+        <Property name="text" type="java.lang.String" value="Operating system: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -191,7 +191,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Arquitectura del SO:"/>
+        <Property name="text" type="java.lang.String" value="SO architecture: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
@@ -199,7 +199,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Version del SO:"/>
+        <Property name="text" type="java.lang.String" value="SO version:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
@@ -207,7 +207,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Ruta del Home:"/>
+        <Property name="text" type="java.lang.String" value="Route of the Home: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -215,7 +215,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Nombre del usuario:"/>
+        <Property name="text" type="java.lang.String" value="User name: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">

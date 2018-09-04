@@ -62,7 +62,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="modelo_lbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="100" max="32767" attributes="0"/>
+                              <EmptySpace pref="130" max="32767" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -73,7 +73,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -151,7 +151,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Modelo:"/>
+        <Property name="text" type="java.lang.String" value="Model:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -159,7 +159,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Fabricante:"/>
+        <Property name="text" type="java.lang.String" value="Maker:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -167,7 +167,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Memoria de video:"/>
+        <Property name="text" type="java.lang.String" value="Video memory:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
@@ -175,7 +175,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Vercion:"/>
+        <Property name="text" type="java.lang.String" value="Version:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="vercion_lbl">

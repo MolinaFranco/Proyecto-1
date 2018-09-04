@@ -59,7 +59,7 @@
                           <Component id="modelo_lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="marca_lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="88" max="32767" attributes="0"/>
+                      <EmptySpace pref="98" max="32767" attributes="0"/>
                       <Component id="PanelG" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
@@ -139,7 +139,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Marca:"/>
+        <Property name="text" type="java.lang.String" value="Brand:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -147,7 +147,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Modelo:"/>
+        <Property name="text" type="java.lang.String" value="Model:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -163,7 +163,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Noto Sans" size="18" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Usada:"/>
+        <Property name="text" type="java.lang.String" value="Used:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="marca_lbl">
